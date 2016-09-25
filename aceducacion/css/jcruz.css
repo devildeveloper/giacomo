@@ -1,0 +1,7 @@
+@charset "utf-8";
+body, html {
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background:url(../img/patron.jpg);
+}

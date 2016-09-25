@@ -1,0 +1,30 @@
+pre {border-color: #AAB4BE #AAB4BE #AAB4BE #B4B4B4;
+    border-style: dotted dotted dotted solid;
+    border-width: 1px 1px 1px 20px;
+    color: #2E8B57;
+    font-family: "Courier New",Courier,monospace;
+    font-size: 90%;
+    margin: 10px 0 10px 0;
+    padding: 5px 0 5px 10px;}
+
+.usage .itemContent ol li { margin-bottom: 10px; }
+.usage .itemContent ol {padding-left : 20px;}
+.options table {margin-left: 20px;}
+.buttons {margin-top: 10px; margin-bottom : 10px;}
+th {text-align: left; padding-right: 30px;}
+.htmlCode, .jsCode {display: block;}
+.download {width: 64px; height: 64px; background: url('pic/download.png') no-repeat; display: block;}
+.down .itemContent {width: 64px; height: 64px;}
+.htmlLink,.jsLink {width:100px}
+
+.htmlCode,.jsCode {text-decoration: none;}
+.htmlCode:hover,.jsCode:hover {text-decoration: underline;}
+
+.footer {margin-top: 30px; margin-bottom: 30px; text-align: center;}
+
+.explain {}
+.docItem {}
+.itemTitle { margin-left: 30px;}
+.itemContent { margin-left: 50px;}
+.map {width: 400px; height: 300px; border: 1px solid #000; margin-bottom: 20px;}
+#complex-map.map {width: 600px; height: 400px;}

@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"> 
+<head>
+<title>EDUCACIÓN EN ACCIÓN PERÚ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/estilo.css" type="text/css" media="screen" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#conocenos").click(function(){
+	  	$("#menuv").load("submenus/clear.html");
+	  	$("#cont_der").load("items/home.html");
+  });
+  $("#mision").click(function(){
+  		$("#menuv").load("submenus/clear.html");
+		$("#cont_der").load("items/mision.html");
+  });
+  $("#objetivos").click(function(){
+	  	$("#menuv").load("submenus/clear.html");
+	  	$("#cont_der").load("items/objetivos.html");
+  });
+  $("#principios").click(function(){
+    	$("#menuv").load("submenus/clear.html");
+		$("#cont_der").load("items/principios.html");
+  });
+  $("#areas").click(function(){
+    	$("#menuv").load("submenus/areas.html");
+		$("#cont_der").load("items/areas.html");
+  });
+  $("#proyectos").click(function(){
+	  	$("#menuv").load("submenus/clear.html");
+	  	$("#cont_der").load("items/proyectos.html");
+  });
+  $("#oferta").click(function(){
+	  	$("#menuv").load("submenus/clear.html");
+		$("#cont_der").load("items/oferta.html");
+  });
+  $("#redes").click(function(){
+	  	$("#menuv").load("submenus/clear.html");
+	  	$("#cont_der").load("items/redes.html");
+  });
+  $("#casaVerde").click(function(){
+	    $("#menuv").load("submenus/clear.html");
+  		$("#cont_der").load("items/casaverde.html");
+		closeBox();
+  });
+  /*/////////////////MENU CHIQUITO/////////////*/
+  $("#_cursos").click(function(){
+	  	$("#menuv").load("submenus/clear.html");
+	  	$("#cont_der").load("items/cursos.html");
+  });
+  $("#_contacto").click(function(){
+	  	$("#menuv").load("submenus/clear.html");
+	  	$("#cont_der").load("items/contacto.html");
+  });
+  /*//////////////SUBMENU/////////////////*/
+  
+  $(".modalCover").fadeIn(1000,function(){
+		$("body").css("overflow", "hidden");
+	});
+});
+</script>
+<script type="text/javascript">
+function closeBox(){
+	$(".modalCover").fadeOut(500,function(){
+		$("body").css("overflow", "visible");
+	});	
+}
+function slideSwitch() {
+    var $active = $('.slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('.slideshow IMG:last');
+
+    var $next =  $active.next().length ? $active.next()
+        : $('.slideshow IMG:first');
+    $active.addClass('last-active');
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+$(function() {
+    setInterval( "slideSwitch()", 4000 );
+});
+/*********************************************/
+
+
+</script>
+</head>
+
+<body>
+
+<div id="contenedor">
+<div class="slideshow" id="header">
+	<img src="img/image.jpg" alt="Niños Estudiando" class="active" />
+    <img src="img/image2.jpg" alt="Capacitaciones" />
+    <img src="img/image4.jpg" alt="Niños del Perú" />
+    <img src="img/image3.jpg" alt="Pueblos Rurales" />
+</div>
+<div id="botones">
+	<a href="home.html"><div id="logo"></div></a>
+<script>
+$('#logo').animate({
+    opacity: 1,
+    left: '50',
+    }, 2000, function() {
+    //alert("end");
+});
+$('#logo').hover(function(){
+	$('#logo').animate({
+    top: '-4',
+    }, 200, function() {
+    $('#logo').animate({
+    top: '0',
+    }, 200);
+});
+});
+
+</script>
+    <img id="conocenos" class="nimenu" src="img/conocenos.png" width="85" height="21">
+    <img id="mision" class="nimenu" src="img/mision.png" width="110" height="21">
+    <img id="objetivos" class="nimenu" src="img/objetivos.png" width="85" height="21">
+    <img id="principios" class="nimenu" src="img/principios.png" width="135" height="21">
+    <img id="areas" class="nimenu" src="img/areas.png" width="122" height="21" style="margin-right:-1px">
+    <br />
+    <img id="proyectos" class="nimenu" src="img/proyectos.png" width="174" height="20">
+    <img id="oferta" class="nimenu" src="img/oferta.png" width="110" height="20">
+    <img id="redes" class="nimenu" src="img/redes.png" width="145" height="20">
+</div>
+<div id="cont_izq">
+<div id="utils">
+	<a href="home.html" target="_self"><img alt="Inicio" src="img/home.png" width="34" height="30" border="0"></a>
+    <img alt="Mapa" src="img/mapa.png" width="34" height="30" border="0">
+    <img alt="Contactenos" src="img/mail.png" width="34" height="30" border="0">
+    <img alt="Buscar" src="img/buscar.png" width="34" height="30" border="0" style="margin-right:0px !important">
+</div>
+<div id="menuv">
+	<!--aqui cargaré los diversos menus :D-->
+</div>
+<div id="_cursos" class="btn">Cursos</div>
+<div id="_bolsa" class="btn">Bolsa de trabajo</div>
+<div id="_biblioteca" class="btn">Biblioteca</div>
+<div id="_contacto" class="btn">Contáctenos</div>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.educaccionperu.com&amp;layout=standard&amp;show_faces=true&amp;width=150&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:150px; height:auto"></iframe>
+</div>
+
+<div id="cont_der">
+  <h2>CONÓCENOS</h2>
+  <p>&nbsp;</p>
+  <img src="img/pic1.jpg" width="166" height="201">
+  <p>La Asociación Educación en Acción es una organización no gubernamental, de iniciativa social y sin ánimo de lucro. Fue constituida con el objeto de contribuir al mejoramiento de la calidad de la educación y la promoción del desarrollo humano.</p>
+  <p>&nbsp;</p>
+  <p>Para ello, EDUCACCIÓN viene desarrollando programas de formación a los diferentes agentes educativos. Asimismo, en la búsqueda de una educación de calidad, que propicie aprendizajes relevantes en los educandos, EDUCACCIÓN difunde e implementa programas que perfilan la gestión y la práctica pedagógica en todos los niveles del sistema educativo, contribuyendo con el proceso  de innovación en las instituciones educativas para que sean competentes al responder a las demandas de la Sociedad del Conocimiento y a los requerimientos de una educación para el siglo XXI.</p>
+  <p>&nbsp;</p>
+  <p>Queremos que la educación llegue al mayor número de personas, pero también que su calidad sea cada vez mejor y que se dirija a la transformación social.</p>
+</div>
+<div class="clear"></div>
+</div>
+
+<div id="pie">
+  Calle Los Guayabos 196 Dpto. 301 Camacho, La Molina Lima-Perú<br>
+    Tel. 975 563 575 RPM *861 186<br>
+    www.aceducacionenaccion.com
+  
+</div>
+<div class="modalCover">
+  <div class="modalCont">
+  	<img id="casaVerde" style="cursor:pointer" src="img/modal.png"  />
+    <div><img onclick="closeBox();" class="closeModal" src="img/closemodal.png" /></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	
+	background-image:url(../images/bg.png);
+	background-color:#002131;
+	background-position:center -100px;
+	background-repeat:no-repeat;
+	
+	margin: 0; padding:0; border:0;
+}
+#head{
+	width:1000px; height:120px;
+	margin-top:10px; padding-top: 10px;
+	margin-left:auto; margin-right:auto;
+	background-image:url(../images/bg_head.png);
+}
+#main {
+	font-family: Century Gothic, sans-serif; font-size:14px;
+	text-align:justify;
+	background-color:#FFF;
+	border:#A99668 solid 16px;
+	margin-left:auto; margin-right:auto;
+    width: 968px;
+    height: 450px;
+   
+}
+#botones {
+	width:1000px; height:50px;
+	margin-left:auto; margin-right:auto;
+	padding-top:10px;
+	text-decoration:none;
+}
+.btn{
+	height:40px;
+	color:#FFF;
+	font-size:15px;
+	font-family:"Myriad Pro";
+	padding-left:38px; padding-top:10px;
+	text-align:left;
+	text-decoration:none !important;
+}
+a:link #cero{color:#FFF;  padding-top:10px; text-decoration:none;}
+a:visited #cero{color:#FFF; text-decoration:none;}
+a:hover #cero{color:#FFF; padding-top:15px; text-decoration:none;}
+a:active #cero{color:#FFF; text-decoration:none;}
+
+a:link #uno{color:#FFF;  padding-top:10px; text-decoration:none;}
+a:visited #uno{color:#FFF; text-decoration:none;}
+a:hover #uno{color:#FFF; padding-top:15px; text-decoration:none;}
+a:active #uno{color:#FFF; text-decoration:none;}
+
+a:link #dos{color:#FFF;  padding-top:10px; text-decoration:none;}
+a:visited #dos{color:#FFF; text-decoration:none;}
+a:hover #dos{color:#FFF; padding-top:15px; text-decoration:none;}
+a:active #dos{color:#FFF; text-decoration:none;}
+
+a:link #tres{color:#FFF;  padding-top:10px; text-decoration:none;}
+a:visited #tres{color:#FFF; text-decoration:none;}
+a:hover #tres{color:#FFF; padding-top:15px; text-decoration:none;}
+a:active #tres{color:#FFF; text-decoration:none;}
+
+a:link #cuatro{color:#FFF;  padding-top:10px; text-decoration:none;}
+a:visited #cuatro{color:#FFF; text-decoration:none;}
+a:hover #cuatro{color:#FFF; padding-top:15px; text-decoration:none;}
+a:active #cuatro{color:#FFF; text-decoration:none;}
+
+a:link #cinco{color:#FFF;  padding-top:10px; text-decoration:none;}
+a:visited #cinco{color:#FFF; text-decoration:none;}
+a:hover #cinco{color:#FFF; padding-top:15px; text-decoration:none;}
+a:active #cinco{color:#FFF; text-decoration:none;}
+
+#cero {
+	background-image:url(../images/home.png);
+	background-repeat:no-repeat;
+}
+#uno {
+	background-image:url(../images/nosotros.png);
+	background-repeat:no-repeat;
+}
+#dos {
+	background-image:url(../images/proyectos.png);
+	background-repeat:no-repeat;
+}
+#tres {
+	background-image:url(../images/inmo.png);
+	background-repeat:no-repeat;
+}
+#cuatro {
+	background-image:url(../images/temas.png);
+	background-repeat:no-repeat;
+}
+#cinco {
+	background-image:url(../images/contacto.png);
+	background-repeat:no-repeat;
+}
+#pie {
+	color:#FFF;
+	font-size:10px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:center;
+	padding-top:10px; margin-top:20px;
+	background-image:url(../images/bg_pie.png);
+	background-repeat:repeat-x;
+	width: 100%;
+	height: 40px;
+}
+.sangrado { width:100% - 40px; height:auto; padding:0px 20px 0px 20px; margin-top:2px; background-image:url(../images/li.png); background-repeat:no-repeat; background-position:0px 2px; }
+
+.clear {
+clear: both;
+}

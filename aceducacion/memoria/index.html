@@ -1,0 +1,289 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MEMORIA</title>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+<script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.html5Loader.js"></script>
+<script src="js/jquery.jrumble.1.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.timer.js"></script>
+<script type="text/javascript">
+	$.html5Loader({
+		filesToLoad:        'js/files.json',
+		onBeforeLoad:       function () {  },
+		onComplete:         function () { 
+											$(".maintheme").trigger("play");
+											$("#game").show();
+											$(".loader").hide();
+										},
+		onElementLoaded:    function ( obj, elm) { $(".trash").append(elm); },
+		onUpdate:           function ( percentage ) { 
+								var numY = -50*Math.round(percentage);
+								var attrY = "center "+numY+"px";
+								$(".percent").css("background-position", attrY);
+							}      
+	}); 
+</script>
+<script>
+  // For IE11. May we one day live without your BS.
+  //Modernizr.addTest('preserve3d', function(){return Modernizr.testAllProps('transformStyle', 'preserve-3d');});
+</script>
+<script src="js/main.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="trash" style="display:none"></div>
+<div id="contenedor">
+<!-- SONIDOS -->
+<audio loop class="maintheme">
+  <source src="sounds/maintheme.mp3" type="audio/mpeg">
+</audio>
+<audio class="soundClock">
+  <source src="sounds/clock.mp3" type="audio/mpeg">
+</audio>
+<audio class="soundError">
+  <source src="sounds/error.mp3" type="audio/mpeg">
+</audio>
+<audio class="soundGreat">
+  <source src="sounds/great.mp3" type="audio/mpeg">
+</audio>
+<audio class="soundFlip">
+  <source src="sounds/flip.mp3" type="audio/mpeg">
+</audio>
+<audio class="over1">
+  <source src="sounds/over.mp3" type="audio/mpeg">
+</audio>
+<audio class="over2">
+  <source src="sounds/over.mp3" type="audio/mpeg">
+</audio>
+<audio class="over3">
+  <source src="sounds/over.mp3" type="audio/mpeg">
+</audio>
+<audio class="over4">
+  <source src="sounds/over.mp3" type="audio/mpeg">
+</audio>
+<audio class="over5">
+  <source src="sounds/over.mp3" type="audio/mpeg">
+</audio>
+<audio class="over6">
+  <source src="sounds/over.mp3" type="audio/mpeg">
+</audio>
+<audio class="over7">
+  <source src="sounds/over.mp3" type="audio/mpeg">
+</audio>
+<audio class="over8">
+  <source src="sounds/over.mp3" type="audio/mpeg">
+</audio>
+
+<!--  LOADER, INSTRUCCIONES y MENU INICIAL -->
+<div class="loader"><div class="percent"></div></div>
+<div id="game">
+<div class="menu">
+	<div class="ct_menu">
+    	<div class="btn_ini"></div>
+    	<div class="btn_how"></div>
+        <div class="sig">
+        	<div class="btn_coin"></div>
+        	<div class="btn_rank"></div>
+        </div>
+    </div>
+</div>
+<div class="how">
+	<div class="btn_return"></div>
+</div>
+<!--  END PANTALLAS -->
+
+<div class="cont_time">
+	<div id="time"><div id="sec"></div></div>
+</div>
+<div id="live"></div>
+<div id="score">000</div>
+<div class="inf_btns">
+	<div onClick="pauseGame();" class="botmenu"></div>
+    <div class="botmore"></div>
+</div>
+<div class="share">
+	<div class="botfb"></div>
+    <div class="bottw"></div>
+</div>
+
+<!-- MENSAJES -->
+<div class="velo opacidad"><div class="box"><div onClick="generate();" onMouseOver="overSnd(5);" id="btnInicio"></div></div></div>
+<div class="noClick"></div>
+<!-- MENSAJES -->
+
+<div id="contCards">
+<div class="hover panel" id="card1">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr1" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card2">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr2" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card3">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr3" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card4">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr4" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card5">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr5" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card6">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr6" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card7">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr7" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card8">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr8" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card9">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr9" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card10">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr10" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card11">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr11" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card12">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr12" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card13">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr13" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card14">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr14" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card15">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr15" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card16">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr16" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card17">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr17" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card18">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr18" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card19">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr19" class="pad"></div>
+	</div>
+</div>
+<div class="hover panel" id="card20">
+	<div class="front">
+	  <div class="pad"></div>
+	</div>
+	<div class="back">
+		<div id="sr20" class="pad"></div>
+	</div>
+</div>
+</div>
+
+</div>
+</div>
+<div><b>Game v1.8</b></div>
+<div class="jso"></div>
+
+
+
+</body>
+</html>

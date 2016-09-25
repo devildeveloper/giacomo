@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html, body{ border:0; margin:0 }
+body{ background:#96BFD9 url(../img/bg.png) repeat-x }
+
+#contenedor{ width:1000px; background:#F2F2F2; margin:24px auto; position:relative; padding-top:96px; padding-bottom:8px }
+#sub-contenedor{ width:984px; border:1px solid #295073; margin:0 auto }
+#menu{ width:100%; height:32px; background:url(../img/bg_menu.png) repeat-x; position:relative }
+#buscador{ width:auto; height:20px; position:absolute; right:10px; top:6px }
+#btn_buscar:hover{ opacity:.7 }
+.sub-menu{ width:150px; height:auto; color:#FFF; position:absolute; display:none }
+.sub_btn{ padding:4px; background:#295073; border:1px solid #FFF; border-top:none; cursor:pointer; font-size:12px; font-family:Arial, Helvetica, sans-serif }
+.sub_btn:hover{ background:#658092 }
+
+#menu ul { list-style-type: none; height: auto; margin: 0; padding:0; font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif }
+#menu ul li { float: left; padding:5px 15px 5px 15px; background:url(../img/line-menu.png) no-repeat 100% 0 }
+#menu ul li:hover { background:url(../img/bg2-menu.png) !important }
+.classOver{ background:url(../img/bg2-menu.png) !important }
+
+#menu ul li a { color:#FFF; text-decoration:none }
+
+#formulario{ width:948px; height:80px; margin:10px auto; background: #96BFD9; padding:10px }
+.btn{ color:#FFF; width:50px; text-align:center; background:#376B99; border:1px solid #295073; padding:5px 10px; font-size:12px; font-family:Arial, Helvetica, sans-serif; cursor:pointer }
+.btn:hover{ opacity:.6 }
+.cajaLegend{ border:#295073 1px solid; width:418px; margin-left:auto }
+.cajaLegend legend { color:#295073; font-family:Arial, Helvetica, sans-serif; padding:0 5px }
+.tip-noticia{ margin:0 10px 10px 10px; height:100px; overflow:hidden; padding:5px; color:#295073; font-family:Verdana, Geneva, sans-serif; font-size:10px; cursor:pointer }
+.tip-noticia span{ font-family:Verdana, Geneva, sans-serif !important }
+.tip-noticia:hover{ background:#CCC }
+.tip-noticia img{ float:left; width:120px; height:100px; margin-right:12px }
+#cont-noticias{ height: 226px; position: absolute; top: 26px; overflow: hidden; }
+
+#slide img{ width:412px; height:412px;
+	border-radius: 16px;
+	-ms-border-radius: 16px;
+	-moz-border-radius: 16px;
+	-webkit-border-radius: 16px;
+	-khtml-border-radius: 16px;
+	}
+#slide2 img{ width:784px; height:260px; 
+	}
+
+/*       SECTION      */
+#menu-int{ width:180px; background:#295073; height:auto; overflow:hidden }
+#menu-int ul { list-style-type: none; height: auto; margin: 0; padding:0; font-size:12px; font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif }
+#menu-int ul li { width:135px; padding:8px 15px 8px 30px; background:url(../img/arrow.png) no-repeat 7px 50%; cursor:pointer }
+#menu-int ul li:hover { background:url(../img/bg2-menu.png) !important }
+#menu-int ul li a { color:#FFF; text-decoration:none }
+
+#mapaSitio { list-style-image:url(../img/vineta.png); margin-top:10px }
+#mapaSitio li{ padding:3px }
+
+ul#mapaSitio ._li:hover{ margin-left:10px !important; text-decoration:underline !important }
+#banner-section{ width:784px; height:260px; margin:10px 10px 0 0; float:right }
+/*    END SECTION     */
+
+.roundx6{
+	border-radius: 6px 6px 6px 6px;
+	-ms-border-radius: 6px 6px 6px 6px;
+	-moz-border-radius: 6px 6px 6px 6px;
+	-webkit-border-radius: 6px 6px 6px 6px;
+	-khtml-border-radius: 6px 6px 6px 6px;
+}
+.roundx12{
+	border-radius: 16px;
+	-ms-border-radius: 16px;
+	-moz-border-radius: 16px;
+	-webkit-border-radius: 16px;
+	-khtml-border-radius: 16px;
+}
+.roundxmenu{
+	border-radius: 5px 5px 0px 0px;
+	-ms-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	-khtml-border-radius: 5px 5px 0px 0px;
+}
+.roundxSearchBtn{
+	border-radius: 0px 5px 5px 0px;
+	-ms-border-radius: 0px 5px 5px 0px;
+	-moz-border-radius: 0px 5px 5px 0px;
+	-webkit-border-radius: 0px 5px 5px 0px;
+	-khtml-border-radius: 0px 5px 5px 0px;
+}
+.roundxMenuInt{
+	border-radius: 0px 0px 6px 6px;
+	-ms-border-radius: 0px 0px 6px 6px;
+	-moz-border-radius: 0px 0px 6px 6px;
+	-webkit-border-radius: 0px 0px 6px 6px;
+	-khtml-border-radius: 0px 0px 6px 6px;
+}
+.sombra1 {
+	-webkit-box-shadow: 0 8px 6px -5px black;
+	   -moz-box-shadow: 0 8px 6px -5px black;
+	        box-shadow: 0 8px 6px -5px black;
+}
+input[type="text"] {
+	width:150px;
+	height:18px;
+	color:#000;
+}
+
+#pie{ font-size:12px; color:#000; line-height:16px; text-align:center; width:1000px; margin:-10px auto 10px auto }

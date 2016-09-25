@@ -1,0 +1,170 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ background:#000 url(../img/bg2.png) repeat-y center; margin:0; padding:0; text-align:center; overflow:auto; overflow-x:hidden }
+#contenedor{ width:900px; height:auto; margin:4px auto 70px auto; background:#FFF; padding:7px; display:block }
+#header{ width:900px; height:175px; margin-bottom:7px }
+#logo{ width:228px; height:57px; background:url(../img/logo.png); position:absolute; top:2px; left:120px; z-index:999; opacity:0 }
+#botones{ width:900px; height:60px; padding-top:5px; margin:auto; text-align:right; position:relative }
+#botones img{ margin-right:0px; margin-bottom:0px; cursor:pointer; z-index:9999; position:relative }
+
+#cont_izq{ width:151px; height:auto; margin-right:7px; float:left }
+#utils img{ margin-right:1px; cursor:pointer }
+#utils a{ text-decoration:none }
+.btn{ width:143px; height:20px; background:#2B72B4; margin-bottom:7px; color:#FFF; font-size:12px; font-family:Calibri; font-weight:bold; padding:5px 4px 0px 4px; text-align:left; cursor:pointer }
+.btn:hover { background:#4B93D3; }
+.nimenu{
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-khtml-border-radius: 10px;
+}
+.nimenu:hover { opacity:0.9;
+box-shadow:#666666 3px 3px 3px;
+filter: progid:DXImageTransform.Microsoft.Shadow(color='#666666', Direction=135, Strength=4);
+ }
+
+#cont_der{ width:722px; padding:6px 10px 30px 10px; height:auto; background:#FFDEC9; float:left; }
+#cont_der h2{ color:#1B4770; font-family:Calibri; margin:0px; padding:0px; text-align:left }
+#cont_der p{ color:#000; font-size:13px; font-family:Calibri; margin:0px; padding:0px ; text-align:justify; line-height:20px }
+#cont_der ul li{ color:#000; font-size:13px; font-family:Calibri; margin:0px; padding:0px ; text-align:justify; line-height:20px; list-style:url(../img/lapiz.png) }
+#cont_der img{ border:#FFF 4px solid; float:right; margin-left:10px }
+
+#pie{ background:#725437 repeat-x; padding-top:2px; padding-bottom:2px; text-align:center; font-family:Calibri; font-weight:bold; font-size:12px;
+	  position:fixed; width:100%; bottom:0px; border-top:#B17007 4px solid; color:#FFF;
+	  text-shadow:#000 3px 3px 3px; z-index:999;
+	  /*filter: progid:DXImageTransform.Microsoft.Shadow(color='#000', Direction=135, Strength=4);*/
+ }
+
+
+/*--------------------------MENU IZQUIERDO-------------------------------*/
+#menuv {
+        width: 150px;
+        font: 80% "Trebuchet MS", Arial, Helvetica, sans-serif;
+		margin:2px 0 7px 0;
+}
+#menuv ul, li {
+        list-style-type: none;
+}
+#menuv ul {
+        margin: 0;
+        padding: 0;
+}
+#menuv li {
+        border-bottom: 1px solid #ACCFE8;
+}
+#menuv a {
+        text-decoration: none;
+        color: #000;
+        background: #95B8D9;
+        display: block;
+        padding: 3px 6px;
+}
+#menuv a:hover {
+        background: #BFD4E8;
+}
+/*////////////////////////////*/
+.clear{ clear:both }
+/*//////////////////SILEDERR/////////////////////*/
+.slideshow {
+    position:relative;
+    height:350px;
+}
+.slideshow IMG {
+	width:900px; height:175px;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+    opacity:0.0;
+}
+.slideshow IMG.active {
+    z-index:10;
+    opacity:1.0;
+}
+.slideshow IMG.last-active {
+    z-index:9;
+}
+.linea{ width:100%; margin-bottom:10px; border-top:1px #2B72B4 solid }
+
+/*////////////////////CONTACTO///////////////////*/
+
+p.formm, h1.formm{border:0; margin:0; padding:0;}
+form, button{border:0; margin:0; padding:0;}
+.spacer{clear:both; height:1px;}
+
+/* ----------- My Form ----------- */
+#stylized input{
+float:left;
+font-size:12px;
+padding:4px 2px;
+border:solid 1px #aacfe4;
+width:200px;
+margin:2px 0 20px 10px;
+}
+
+#stylized textarea{
+float:left;
+font-size:12px;
+padding:4px 2px;
+border:solid 1px #aacfe4;
+width:200px; height:100px;
+margin:2px 0 20px 10px;
+}
+#stylized button{
+clear:both;
+margin-left:150px;
+width:125px;
+height:31px;
+background:#666666 url(img/btn.png) no-repeat;
+text-align:center;
+line-height:31px;
+color:#FFFFFF;
+font-size:11px;
+font-weight:bold;
+}
+
+#stylized .radiox{
+	width:15px
+}
+#stylized .btn{
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold;
+    height: 31px;
+    line-height: 31px;
+    text-align: center;
+    width: 100px; float:left; margin-right:10px
+}
+/********MODAL*************/
+.modalCover{
+	position: absolute;
+    background: black;
+    z-index: 999999;
+	background:url(../img/bgmodal.png);
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+	display:none;
+}
+.modalCont{
+	width: 688px;
+    height: 399px;
+	padding:10px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -349px;
+    margin-top: -205px;
+}
+.closeModal{
+	top: -10px;
+	right: -10px;
+	position: absolute;
+	cursor:pointer;
+}
+.closeModal:hover{
+	opacity:.8;
+}

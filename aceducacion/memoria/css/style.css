@@ -1,0 +1,379 @@
+body{
+	background:#C0C0C0;
+}
+
+.loader{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 99999999;
+	background:url(../img/loader.png) no-repeat;
+}
+.percent{
+	position:absolute;
+	width:109px;
+	height:50px;
+	left:50%; margin-left:-51px;
+	top:224px;
+	background:url(../img/percent-load.png) center 0px no-repeat;
+}
+
+.menu{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 9999999;
+	background:url(../img/inicio.png) no-repeat 11px 12px;
+}
+.ct_menu{
+	width: 179px;
+	height: 175px;
+	position: absolute;
+	margin-top: 103px;
+	margin-left: 458px;
+}
+.ct_menu .btn_ini{
+	background:url(../img/btn_ini_menu.png) no-repeat;
+	width:181px; height:62px;
+	margin-bottom:2px;
+	cursor:pointer;
+}
+.ct_menu .btn_ini:hover{ background:url(../img/btn_ini_menu_over.png) no-repeat; }
+
+.ct_menu .btn_how{
+	background:url(../img/btn_how_menu.png) no-repeat;
+	width:179px; height:59px;
+	margin-bottom:2px;
+	cursor:pointer;
+}
+.ct_menu .btn_how:hover{ background:url(../img/btn_how_menu_over.png) no-repeat; }
+
+.ct_menu .btn_coin{
+	background:url(../img/btn_coin_menu.png) no-repeat;
+	width:50px; height:51px;
+	float:left;
+	cursor:pointer;
+}
+.ct_menu .btn_coin:hover{ background:url(../img/btn_coin_menu_over.png) no-repeat; }
+
+.ct_menu .btn_rank{
+	background:url(../img/btn_rank_menu.png) no-repeat;
+	width:50px; height:51px;
+	float:left;
+	cursor:pointer;
+	margin-left: 16px;
+}
+.ct_menu .btn_rank:hover{ background:url(../img/btn_rank_menu_over.png) no-repeat; }
+
+.sig{ overflow:hidden; margin-left: 36px; margin-top: 10px; }
+
+.how{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 9999999;
+	background:url(../img/how.png) no-repeat 10px 13px;
+	display:none;
+}
+.btn_return{
+	width:49px; height:51px;
+	background:url(../img/return_btn.png) no-repeat;
+	position:absolute;
+	left:50%;
+	margin-left: -17px;
+	top: 260px;
+	cursor:pointer;
+}
+.btn_return:hover{
+	background:url(../img/return_btn_over.png) no-repeat;
+}
+
+
+.velo{
+	position: absolute;
+	width: 373px;
+	height: 286px;
+	top: 29px;
+	left: 318px;
+	z-index: 999999;
+}
+.noClick{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	display:none;
+}
+.box{
+	width: 181px;
+	height: 90px;
+	background:url(../img/inicio_box.png) no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -45px;
+	margin-left: -90px;
+}
+#btnInicio{
+	width:131px; height:42px;
+	cursor:pointer;
+	margin: 24px 0px 0px 26px;
+	background:url(../img/inicio_btn.png) no-repeat;
+}
+#btnInicio:hover{
+	background:url(../img/inicio_btn_over.png) no-repeat;
+}
+
+.btnLvl{
+	width: 133px;
+	height: 46px;
+	margin: 23px 0px 0px 25px;
+	background: url(../img/nivel_2.png) no-repeat;
+}
+
+.box2{
+	width: 204px;
+	height: 202px;
+	background:url(../img/end_box.png) no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -102px;
+	margin-left: -101px;
+}
+.box3{
+	width: 185px;
+	height: 96px;
+	background:url(../img/abandonar_box.png) no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -41px;
+	margin-left: -84px;
+}
+.box3 .contbt{
+	margin: 36px 0px 0px 15px;
+	overflow: hidden;
+}
+.box3 .si{ width:73px;
+	height:42px;
+	background:url(../img/si.png) no-repeat;
+	cursor:pointer;
+	float:left;
+}
+.box3 .no{
+	width:73px;
+	height:42px;
+	background:url(../img/no.png) no-repeat;
+	cursor:pointer;
+	float:left;
+	margin-left: 7px;
+}
+.box3 .si:hover{ background:url(../img/si_over.png) no-repeat; }
+.box3 .no:hover{ background:url(../img/no_over.png) no-repeat; }
+
+#again{ width:131px; height:42px; background:url(../img/again.png) no-repeat; margin: 56px auto 0px auto; cursor:pointer }
+#more{ width:131px; height:42px; background:url(../img/more.png) no-repeat; margin:0px auto; cursor:pointer }
+#salir{ width:131px; height:42px; background:url(../img/exit.png) no-repeat; margin:0px auto; cursor:pointer }
+#again:hover{ background:url(../img/again_over.png) no-repeat; }
+#more:hover{ background:url(../img/more_over.png) no-repeat; }
+#salir:hover{ background:url(../img/exit_over.png) no-repeat; }
+
+.opacidad{
+	background:url(../img/cover.png);
+}
+#contenedor{
+	width: 744px;
+	height: 344px;
+	position:relative;
+	border:1px solid #000;
+}
+#game{
+	display:none;
+	width: 100%;
+	height: 100%;
+	position:abolute;
+	background:url(../img/game.png) no-repeat;
+}
+.inf_btns{
+	width: 214px;
+	height: 42px;
+	position: absolute;
+	top: 283px;
+	left: 53px;
+}
+.inf_btns .botmenu{ background:url(../img/inf_menu.png) no-repeat; float:left; width:82px; height:42px; cursor:pointer }
+.inf_btns .botmore{ background:url(../img/inf_more.png) no-repeat; float:left; width:131px; height:42px; cursor:pointer }
+
+.botmenu:hover{ background:url(../img/inf_menu_over.png) no-repeat; }
+.botmore:hover{ background:url(../img/inf_more_over.png) no-repeat; }
+
+.share{
+	width: 43px;
+	height: 20px;
+	position: absolute;
+	top: 246px;
+	left: 217px;
+}
+.share .botfb{ background:url(../img/fb.png) no-repeat; float:left; width:18px; height:18px; cursor:pointer; margin-right:2px; }
+.share .bottw{ background:url(../img/tw.png) no-repeat; float:left; width:18px; height:18px; cursor:pointer }
+.botfb:hover, .bottw:hover{ margin-top:1px; }
+
+#live{
+	background: url(../img/vida.png) no-repeat 0px -200px;
+	width: 33px;
+	height: 40px;
+	position: absolute;
+	top: 105px;
+	left: 225px;
+}
+#score{
+	width: 88px;
+	position: absolute;
+	text-align: center;
+	top: 214px;
+	left: 165px;
+	color: #0072BA;
+	font-weight: bold;
+	font-family: verdana;
+	font-size: 12px;
+}
+.cont_time{
+	position: absolute;
+	width: 85px;
+	height: 76px;
+	top: 86px;
+	left: 56px;
+}
+#time{
+	width: 85px;
+	height: 76px;
+	background: url(../img/reloj.png) no-repeat;
+}
+#sec{
+	width:38px; height:30px;
+	position:absolute;
+	background:url(../img/seconds.png) no-repeat 0px -1919px;
+	top: 30px;
+	left: 27px;
+}
+#contCards{
+	position: absolute;
+	width: 380px;
+	top: 32px;
+	left: 320px;
+}
+.pad{
+	font-size: 40px;
+	color: white;
+	text-align: center;
+}
+
+.morePts{
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	z-index:99999;
+}
+.moreTimex5{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left:-55px;
+	margin-top:-22px;
+	z-index:99999;
+}
+.moreTimex20{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left:-85px;
+	margin-top:-25px;
+	z-index:99999;
+}
+
+	.panel {
+		float: left;
+		width: 72px;
+		height: 69px;
+		margin: 0px 2px 1px 0px;
+		position: relative;
+		/*font-size: .8em;*/
+		-webkit-perspective: 600px;
+		   -moz-perspective: 600px;
+				perspective: 600px;
+	}
+	
+	.panel .front {
+		float: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 900;
+		width: inherit;
+		height: inherit;
+		background:url(../img/back.png) no-repeat;
+		text-align: center;
+
+		-webkit-transform: rotateX(0deg) rotateY(0deg);
+			 -moz-transform: rotateX(0deg) rotateY(0deg);
+						transform: rotateX(0deg) rotateY(0deg);
+
+		-webkit-transform-style: preserve-3d;
+			 -moz-transform-style: preserve-3d;
+						transform-style: preserve-3d;
+
+		-webkit-backface-visibility: hidden;
+			 -moz-backface-visibility: hidden;
+						backface-visibility: hidden;
+
+		-webkit-transition: all .4s ease-in-out;
+				transition: all .4s ease-in-out;
+	}
+	.panel.flip .front {
+		z-index: 900;
+		border-color: #eee;
+		background:url(../img/back.png) no-repeat;
+
+		-webkit-transform: rotateY(180deg);
+			-moz-transform: rotateY(180deg);
+				transform: rotateY(180deg);
+	}
+
+	.panel .back {
+		float: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 800;
+		width: inherit;
+		height: inherit;
+		background: #333;
+
+		-webkit-transform: rotateY(-180deg);
+			 -moz-transform: rotateY(-179deg); /* setting to 180 causes an unnatural-looking half-flip */
+				transform: rotateY(-179deg);
+
+		-webkit-transform-style: preserve-3d;
+			 -moz-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+
+		-webkit-backface-visibility: hidden;
+			 -moz-backface-visibility: hidden;
+				backface-visibility: hidden;
+
+		/* -- transition is the magic sauce for animation -- */
+		-webkit-transition: all .4s ease-in-out;
+				transition: all .4s ease-in-out;
+	}
+
+	.panel.flip .back {
+		z-index: 1000;
+		background: #80868d;
+
+		-webkit-transform: rotateX(0deg) rotateY(0deg);
+			 -moz-transform: rotateX(0deg) rotateY(0deg);
+						transform: rotateX(0deg) rotateY(0deg);
+
+		box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	}

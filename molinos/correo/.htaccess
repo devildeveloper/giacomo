@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^correo.losmolinosinmobiliaria.com [OR]
+RewriteCond %{HTTP_HOST} ^www.correo.losmolinosinmobiliaria.com$
+RewriteRule ^(.*)$ http://www.google.com/a/losmolinosinmobiliaria.com [R=301,L]

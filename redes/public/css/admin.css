@@ -1,0 +1,31 @@
+body
+{
+
+}
+
+
+
+/*-------------------------------------------------------- Clases */
+.content
+{
+}
+
+/*-------------------------------------------------------- Header */
+#header{
+    /*background: #fff;*/
+    /*border: solid 1px darkolivegreen;*/
+}
+.container{
+    background: #fff;
+    border: dotted 0px red;
+}
+#footer{
+    color: #fff;
+    overflow: visible;
+}
+#footer p{
+    margin: 16px;
+}
+#footer a{
+    color: #fff;
+}

@@ -1,0 +1,139 @@
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+    $(".boton_envio").click(function() {
+        var empresa = $("#empresa").val();
+            nombres = $("#nombres").val();
+            apellidos = $("#apellidos").val();
+            cargo = $("#cargo").val();
+			sector = $("#sector").val();
+            tlf = $("#tlf").val();
+			email = $("#email").val();
+			validacion_email = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+			interes = $("input[name='interes']:checked").val(); 
+            comentario = $("#comentario").val();
+        if (empresa == "") {
+            $("#empresa").focus();
+			$('.msg').text('Llene todos los campos por favor.').css("color","#770D06").animate({ 'opacity' : 1 }, 300);
+            return false;
+        }else if(nombres == ""){
+            $("#nombres").focus();
+			$('.msg').text('Ingrese un asunto por favor.').css("color","#770D06").animate({ 'opacity' : 1 }, 300);
+            return false;
+        }else if(apellidos == ""){
+            $("#apellidos").focus();
+			$('.msg').text('Ingrese su mensaje por favor.').css("color","#770D06").animate({ 'opacity' : 1 }, 300);
+            return false;
+		}else if(cargo == ""){
+            $("#cargo").focus();
+			$('.msg').text('Ingrese su mensaje por favor.').css("color","#770D06").animate({ 'opacity' : 1 }, 300);
+            return false;
+		}else if(sector == ""){
+            $("#sector").focus();
+			$('.msg').text('Ingrese su mensaje por favor.').css("color","#770D06").animate({ 'opacity' : 1 }, 300);
+            return false;
+		}else if(tlf == ""){
+            $("#tlf").focus();
+			$('.msg').text('Ingrese su mensaje por favor.').css("color","#770D06").animate({ 'opacity' : 1 }, 300);
+            return false;
+		}else if(email == "" || !validacion_email.test(email)){
+            $("#email").focus();
+			$('.msg').text('Ingrese su email por favor.').css("color","#770D06").animate({ 'opacity' : 1 }, 300);
+            return false;
+		}else if(comentario == ""){
+            $("#comentario").focus();
+			$('.msg').text('Ingrese su mensaje por favor.').css("color","#770D06").animate({ 'opacity' : 1 }, 300);
+            return false;
+        }else{
+var datos = 'empresa='+ empresa + '&nombres='+ nombres + '&apellidos='+ apellidos + '&cargo='+ cargo + '&sector='+ sector + '&tlf='+ tlf + '&email=' + email + '&interes=' + interes + '&comentario=' + comentario;
+alert(datos);
+$.ajax({
+    type: "POST",
+    url: "proceso.php",
+    data: datos,
+    success: function() {
+		$('.msg').animate({ 'opacity' : 0 }, 1);
+        $('.msg').text('Su mensaje fue enviado, gracias!').css("color","#033266").animate({ 'opacity' : 1 }, 300);
+    },
+    error: function() {
+		$('.msg').animate({ 'opacity' : 0 }, 1);
+        $('.msg').text('Hubo un error!').css("color","#770D06").animate({ 'opacity' : 1 }, 300);
+    }
+});
+return false;
+        }
+ 
+    });
+});
+
+</script>
+<div class="msg" style="width:300px; height:30px; color:#000"></div>
+<h2>CONTÁCTENOS</h2><br>
+
+<div id="stylized" class="myform">
+<form method="post">
+
+<table style="color:#1B4770; font-family:Calibri" width="100%" border="0">
+  <tr>
+    <td width="24%" align="right" valign="top">Empresa:</td>
+    <td width="53%" align="left" valign="top"><input name="empresa" id="empresa" value="" required type="text"></td>
+    <td width="23%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">Nombres:</td>
+    <td align="left" valign="top"><input name="nombres" id="nombres" value="" required type="text"></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">Apellidos:</td>
+    <td align="left" valign="top"><input name="apellidos" id="apellidos" value="" type="text"></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">Cargo que desempeña:</td>
+    <td align="left" valign="top"><input name="cargo" id="cargo" value="" type="text"></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">Sector al que pertenece:</td>
+    <td align="left" valign="top"><input name="sector" id="sector" value="" type="text"></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">Teléfono:</td>
+    <td align="left" valign="top"><input name="tlf" id="tlf" value="" type="text"></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">E-Mail:</td>
+    <td align="left" valign="top"><input name="email" id="email" value="" required type="text"></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">Usted está interesado en:</legend></td>
+    <td align="left" valign="top">
+    	<div style="width:100px; float:left">
+        <input class="interes" name="interes" value="curso" type="radio" checked="checked">Curso<br>
+        </div>
+        <div style="width:100px; float:left">
+		<input class="interes" name="interes" value="apoyar" type="radio">Apoyarnos
+        </div>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">Comentarios Adicionales:</td>
+    <td align="left" valign="top"><textarea name="comentario" id="comentario" rows="4" cols="40"></textarea></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td valign="top">
+    	<button class="boton_envio" style="cursor:pointer;">ENVIAR</button>
+        </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+</form>
+</div>

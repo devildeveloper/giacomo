@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="Los Molinos" />
+<meta name="description" content="Inmobiliaria, Los Molinos, Perú, Lima, líderes en el mercado de la construcción de alto nivel, Miraflores" />
+<meta name="keywords" content="Somos una empresa dedicada al desarrollo de proyectos inmobiliarios y obras de infraestructura, que crea valor a nuestros clientes, colaboradores y accionistas, con pasión y excelencia." />
+<title>LOS MOLINOS - Inmobiliaria</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+
+$(document).ready(function(){
+    $(".boton_envio").click(function() {
+ 
+        var nombre = $(".nombre").val();
+            email = $(".email").val();
+            validacion_email = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+            asunto = $(".asunto").val();
+            mensaje = $(".mensaje").val();
+ 
+        if (nombre == "") {
+            $(".nombre").focus();
+			$('.msg').text('Ingrese su nombre por favor.').css("color","#770D06").animate({ 'opacity' : 1 }, 300);
+            return false;
+        }else if(email == "" || !validacion_email.test(email)){
+            $(".email").focus();
+			$('.msg').text('Ingrese su email por favor.').css("color","#770D06").animate({ 'opacity' : 1 }, 300);
+            return false;
+        }else if(asunto == ""){
+            $(".asunto").focus();
+			$('.msg').text('Ingrese un asunto por favor.').css("color","#770D06").animate({ 'opacity' : 1 }, 300);
+            return false;
+        }else if(mensaje == ""){
+            $(".mensaje").focus();
+			$('.msg').text('Ingrese su mensaje por favor.').css("color","#770D06").animate({ 'opacity' : 1 }, 300);
+            return false;
+        }else{
+            
+var datos = 'nombre='+ nombre + '&email=' + email + '&asunto=' + asunto + '&mensaje=' + mensaje;
+$.ajax({
+    type: "POST",
+    url: "proceso.php",
+    data: datos,
+    success: function() {
+		$('.msg').animate({ 'opacity' : 0 }, 1);
+        $('.msg').text('Su mensaje fue enviado, gracias!').css("color","#033266").animate({ 'opacity' : 1 }, 300);
+    },
+    error: function() {
+		$('.msg').animate({ 'opacity' : 0 }, 1);
+        $('.msg').text('Hubo un error!').css("color","#770D06").animate({ 'opacity' : 1 }, 300);
+    }
+});
+return false;
+        }
+ 
+    });
+});
+
+</script>
+<link rel="stylesheet" href="css/style01.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/contact.css" type="text/css" media="screen" />
+<style type="text/css">
+.msg{
+    color: #000;
+    font-weight: bold; font-size:10px;
+    height: 14px;
+    position: absolute;
+    right: 12px; bottom:3px;
+	width:250px; opacity:0;
+}
+</style>
+</head>
+
+<body>
+<div id="head">
+    <object width="1000" height="110">
+        <param name="movie" value="head.swf">
+        <embed src="head.swf" width="1000" height="110">
+        </embed>
+    </object>
+</div>
+<div id="main">
+    <table width="100%" border="0">
+  <tr>
+    <td width="48%" rowspan="2">
+    <div id="stylized" class="myform">
+        <form method="post" class="contacto">
+        <h1 class="formm">ESCRÍBANOS</h1>
+        <p class="formm">Si desea hacernos alguna consulta, no dude en escribirnos.</p>
+        
+        <label>Nombre
+        <span class="small">Ingrese su nombre</span>
+        </label>
+        <input type="text" class="nombre" name="nombre" />
+        
+        <label>Email
+        <span class="small">Egregue su email</span>
+        </label>
+        <input type="text" class="email" name="email" />
+        
+        <label>Asunto
+        <span class="small">Asunto de su mensaje</span>
+        </label>
+        <input type="text" class="asunto" name="asunto" />
+        
+        <label>Mensaje
+        <span class="small">Escriba su mensaje</span>
+        </label>
+        <textarea class="mensaje" name="mensaje" cols="" rows=""></textarea>
+        
+        <div class="msg"></div>
+        
+        <button class="boton_envio" style="cursor:pointer;">ENVIAR</button>
+        <div class="spacer"></div>
+        
+        </form>
+    </div>
+    </td>
+    <td width="52%" height="298">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>
+     <div style="width:300px; height:auto; float:left;">
+      <p><strong>INFORMES Y VENTA</strong></p>
+      <p><strong>Teléfonos:</strong> 985581319  - 975563575</p>
+      <p><strong>RPM:</strong> #985581319 - *861186</p>
+      <p><strong>Nextel:</strong> 421*1036</p><br />
+      <p><strong><em><span style="color:#036;">www.los</span><span style="color:#C00;">molinos</span><span style="color:#036;">inmobiliaria.com</span></em></strong></p>
+    </div>
+    </td>
+  </tr>
+</table>
+
+</div>
+<div id="botones"><table width="100%" height="70" border="0">
+  <tr>
+    <td width="12%"><a style="text-decoration:none;" target="_self" href="index.html"><div class="btn" id="cero">Inicio</div></a></td>
+    <td width="19%"><a style="text-decoration:none;" target="_self" href="nosotros.html"><div class="btn" id="uno">Sobre Nosotros</div></a></td>
+    <td width="23%"><a style="text-decoration:none;" target="_self" href="proyectos.html"><div class="btn" id="dos">Constructora Proyectos</div></a></td>
+    <td width="16%"><a style="text-decoration:none;" target="_self" href="inmobiliaria.html"><div class="btn" id="tres">Inmobiliaria</div></a></td>
+    <td width="18%"><a style="text-decoration:none;" target="_self" href="#"><div class="btn" id="cuatro">Temas de Interés</div></a></td>
+    <td width="12%"><a style="text-decoration:none;" target="_self" href="contac.html"><div class="btn" id="cinco">Contáctenos</div></a></td>
+  </tr>
+</table>
+</div>
+<div id="clear"></div>
+<div id="pie">
+	Teléfonos: 985581319  -  975563575</br>RPM: #985581319 - *861186</br>Nextel: 421*1036
+</div>
+</body>
+</html>

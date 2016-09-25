@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Jquery - Maps Plugin - Documentation</title>
+		
+		<link type="text/css" href="css/index.css" rel="stylesheet" />
+		
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="js/jquery-1.6.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.gmaps.js"></script>
+		<script type="text/javascript" src="js/progressBar.js"></script>
+		<script type="text/javascript" src="js/demo.js"></script>
+	</head>
+	<body>
+	 	<h1>&nbsp;</h1>
+	 	<div class="examples docItem">
+	 	  <div class="itemContent">
+		  <div class="explain">
+	 				<h3>Simple Map</h3>
+                    <div id='simple-map' class="map"></div>										
+					<div class="htmlLink"><a href="#" class="htmlCode">HTML Code</a></div>
+					<div class="html-code" style="display: none;">
+						<pre>&lt;div id='simple-map' class="map"&gt;&lt;/div&gt;</pre>
+					</div>
+					<div class="jsLink"><a href="#" class="jsCode">Javascript Code</a></div>
+					<div class="js-code" style="display: none;">
+						<pre>$('#simple-map').gmaps();</pre>
+					</div>
+				</div>
+				
+				<div class="explain">
+					<h3>Complex map</h3>
+					<div id="complex-map" class="map"></div>
+					<div class="buttons">
+						<button class="addMarkers">Add markers</button>
+						<button class="deleteFirstMarker">Delete first marker</button>
+						<button class="deleteCustomMarker">Delete dragabble marker</button>
+						<button class="deleteAllMarkers">Delete all markers</button>
+						<button class="changeCenter">Change center</button>
+					</div>
+					<div class="htmlLink"><a href="#" class="htmlCode">HTML Code</a></div>
+					<div class="html-code" style="display: none;">
+						<pre>&lt;div id='complex-map' class="map"&gt;&lt;/div&gt;</pre>
+					</div>
+					<div class="jsLink"><a href="#" class="jsCode">Javascript Code</a></div>
+					<div class="js-code" style="display: none;">
+						<pre>//Complex map
+    $("#complex-map").gmaps({
+        latitude: 37.00255267215955,
+        longitude: -78.81591796875,
+        zoom: 6  
+    });
+    
+    $('.addMarkers').click(function(){
+        var markers = [
+            {
+                latitude: 38.91221098726067,
+                longitude: -77.23411970625,
+                html: "Address: %address%&lt;br /&gt;Coords: %lat% - %lng%"
+            },
+            {
+                address: "Richmond, usa",
+                html: "Address: %address%&lt;br /&gt;Coords: %lat% - %lng%"
+            },
+            {
+                address: "Norfolk, usa",
+                html: "Address: %address%&lt;br /&gt;Coords: %lat% - %lng%",
+                draggable: true
+            },
+            {
+                address: "Asheville, usa",
+                html: "Address: %address%&lt;br /&gt;Coords: %lat% - %lng%"
+            },
+            {
+                address: "Jacksonville, north carolina, usa",
+                html: "Address: %address%&lt;br /&gt;Coords: %lat% - %lng%"
+            },
+            {
+                address: "Huntington, usa",
+                html: "Address: %address%&lt;br /&gt;Coords: %lat% - %lng%"
+            },
+            {
+                address: "daneville, north carolina,  usa",
+                html: "Address: %address%&lt;br /&gt;Coords: %lat% - %lng%"
+            }
+        ];
+        $("#complex-map").gmaps("deleteAllMarkers");
+        pb.start(markers.length);        
+        $.each(markers,function(index,values){
+            setTimeout(function() { $("#complex-map").gmaps("addMarker",values);}, index*1000); 
+        });
+        
+        
+    });
+    
+    $('.deleteAllMarkers').click(function(){
+        $("#complex-map").gmaps("deleteAllMarkers"); 
+    });
+    
+    $('.changeCenter').click(function(){
+        $("#complex-map").gmaps("centerAt",{address: "Washington DC, USA", zoom: 13}); 
+    });
+    
+    $('.deleteFirstMarker').click(function(){
+        $("#complex-map").gmaps("deleteMarker",0); 
+    });
+    
+    $('.deleteCustomMarker').click(function(){
+        var o = $("#complex-map").data();
+        
+        $.each(o.mapMarkers,function(index,values){
+            if (values.draggable)
+            {
+                $("#complex-map").gmaps("deleteMarker",values);           
+            } 
+        });</pre>
+					</div>
+				</div>
+	 		
+			</div>
+		</div>
+	 
+	 
+	 <div class="footer">
+	 	Create by <a href="mailto:mycroft84gmail.com">MyCroft</a>
+	 </div>
+	</body>
+</html>
